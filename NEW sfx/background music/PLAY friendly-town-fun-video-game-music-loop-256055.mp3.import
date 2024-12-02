@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dil13mh7sq7bq"
+path="res://.godot/imported/PLAY friendly-town-fun-video-game-music-loop-256055.mp3-b8b17500830a1748f4fd031d4b1ee750.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/background music/PLAY friendly-town-fun-video-game-music-loop-256055.mp3"
+dest_files=["res://.godot/imported/PLAY friendly-town-fun-video-game-music-loop-256055.mp3-b8b17500830a1748f4fd031d4b1ee750.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

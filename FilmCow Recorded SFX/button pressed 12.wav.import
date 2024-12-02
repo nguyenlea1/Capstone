@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://r6gr77l7efcb"
+path="res://.godot/imported/button pressed 12.wav-04fa6c32ff0d6d063c239cc94533f27f.sample"
+
+[deps]
+
+source_file="res://FilmCow Recorded SFX/button pressed 12.wav"
+dest_files=["res://.godot/imported/button pressed 12.wav-04fa6c32ff0d6d063c239cc94533f27f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

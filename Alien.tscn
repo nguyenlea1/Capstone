@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdqsctcvcj1tw"]
+
+[ext_resource type="Texture2D" uid="uid://bvk5an7ixtqsd" path="res://Alien-1.png" id="1_r5cq7"]
+[ext_resource type="Script" path="res://alien.gd" id="2_7eulu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Alien-1" type="Sprite2D" parent="."]
+position = Vector2(340, 505)
+scale = Vector2(0.579545, 0.579545)
+texture = ExtResource("1_r5cq7")
+script = ExtResource("2_7eulu")

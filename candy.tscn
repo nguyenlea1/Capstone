@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwxpm1r0i2qhl"]
+
+[ext_resource type="Script" path="res://candy.gd" id="1_1b6or"]
+
+[node name="Candy" type="Node2D"]
+script = ExtResource("1_1b6or")
+
+[node name="WrappedtransBlue" type="Sprite2D" parent="."]
+position = Vector2(75, 47)
+
+[node name="WrappedtransGreen" type="Sprite2D" parent="."]
+position = Vector2(1024, 47)
+
+[node name="WrappedtransOrange" type="Sprite2D" parent="."]
+position = Vector2(403, 96)
+
+[node name="WrappedtransPurple" type="Sprite2D" parent="."]
+position = Vector2(625, 71)
+
+[node name="WrappedtransTeal" type="Sprite2D" parent="."]
+position = Vector2(829, 113)
+
+[node name="WrappedtransYellow" type="Sprite2D" parent="."]
+position = Vector2(203, 109)

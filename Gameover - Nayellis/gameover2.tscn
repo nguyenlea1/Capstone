@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://oypsob8a1nbl"]
+
+[ext_resource type="Texture2D" uid="uid://byfri7g1y4s7i" path="res://Background images/gameover background.webp" id="1_j8d44"]
+[ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Gameover Images/gameover.png" id="2_6nnph"]
+[ext_resource type="Texture2D" uid="uid://bpq7fdr5g32dl" path="res://Gameover Images/gameoveralien.png" id="3_dmxy2"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Gameover Images/Play_Again.png" id="4_py7x1"]
+[ext_resource type="Texture2D" uid="uid://dpiqwgdq4kfqk" path="res://Gameover Images/yes.png" id="5_mix8a"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/yes.gd" id="6_kfjcw"]
+[ext_resource type="Texture2D" uid="uid://bh354fdm3nmtg" path="res://Gameover Images/No.png" id="7_iwlkm"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/no.gd" id="8_fyxvn"]
+
+[node name="Gameover2" type="Node2D"]
+position = Vector2(0, -11)
+
+[node name="GameoverBackground" type="Sprite2D" parent="."]
+position = Vector2(581, 335)
+scale = Vector2(2.425, 2.46667)
+texture = ExtResource("1_j8d44")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(591, 173)
+texture = ExtResource("2_6nnph")
+
+[node name="Gameoveralien" type="Sprite2D" parent="."]
+position = Vector2(607, 527)
+texture = ExtResource("3_dmxy2")
+
+[node name="PlayAgain" type="Sprite2D" parent="."]
+position = Vector2(612, 276)
+scale = Vector2(0.626923, 0.583333)
+texture = ExtResource("4_py7x1")
+
+[node name="YesButton" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 330.0
+offset_right = 698.0
+offset_bottom = 437.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_mix8a")
+flat = true
+script = ExtResource("6_kfjcw")
+
+[node name="NoButton" type="Button" parent="."]
+offset_left = 639.0
+offset_top = 332.0
+offset_right = 804.0
+offset_bottom = 439.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_iwlkm")
+flat = true
+script = ExtResource("8_fyxvn")
+
+[connection signal="pressed" from="YesButton" to="YesButton" method="_on_pressed"]
+[connection signal="pressed" from="NoButton" to="NoButton" method="_on_pressed"]

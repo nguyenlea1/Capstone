@@ -1,0 +1,103 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+[gd_scene load_steps=6 format=3 uid="uid://dl6vkv3511v7o"]
+
+[ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
+[ext_resource type="Texture2D" uid="uid://bd722fiyjuxat" path="res://Game Over/gameover-alien.png" id="2_2cn3q"]
+[ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Game Over/gameover.png" id="3_e1y7f"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="4_uijp7"]
+[ext_resource type="Texture2D" uid="uid://cunl02svxbwia" path="res://Game Over/Yes_Or_No.png" id="5_3r6hx"]
+=======
+=======
+>>>>>>> 511fae2b8d0527245141f09c310ba3f4dd18c87c
+[gd_scene load_steps=4 format=3 uid="uid://c0x6bmfvoh821"]
+
+[ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
+[ext_resource type="Texture2D" uid="uid://b1t61f3nrumy0" path="res://Game Over/Game_Over.png" id="2_w6t3i"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="3_7adlu"]
+<<<<<<< HEAD
+>>>>>>> e52d8d703b05eb2cb420c9e8133bb21a380b0fd0
+=======
+=======
+[gd_scene load_steps=4 format=3 uid="uid://dl6vkv3511v7o"]
+
+[ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
+[ext_resource type="Texture2D" uid="uid://bd722fiyjuxat" path="res://Game Over/gameover-alien.png" id="2_2cn3q"]
+[ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Game Over/gameover.png" id="3_e1y7f"]
+>>>>>>> 8b40c6e39ce54b869509e32698b35394d494a0bc
+>>>>>>> 511fae2b8d0527245141f09c310ba3f4dd18c87c
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_12dlr")
+
+<<<<<<< HEAD
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 287.0
+offset_right = 777.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Oh no! The store owner caught Fibzi!
+
+Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(164, -82)
+texture = ExtResource("2_w6t3i")
+
+=======
+>>>>>>> 8b40c6e39ce54b869509e32698b35394d494a0bc
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+<<<<<<< HEAD
+offset_left = 960.0
+offset_top = 400.0
+offset_right = 1048.0
+offset_bottom = 431.0
+text = "Play Again"
+
+[node name="Gameover-alien" type="Sprite2D" parent="."]
+position = Vector2(592, 536)
+scale = Vector2(0.215686, 0.215686)
+texture = ExtResource("2_2cn3q")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(576, 200)
+scale = Vector2(1.32936, 1.32936)
+texture = ExtResource("3_e1y7f")
+=======
+offset_left = 398.0
+offset_top = 367.0
+offset_right = 861.0
+offset_bottom = 459.0
+icon = ExtResource("3_7adlu")
+flat = true
+>>>>>>> e52d8d703b05eb2cb420c9e8133bb21a380b0fd0
+
+[node name="PlayAgain" type="Sprite2D" parent="."]
+position = Vector2(560, 288)
+scale = Vector2(0.488095, 0.488095)
+texture = ExtResource("4_uijp7")
+
+[node name="YesOrNo" type="Sprite2D" parent="."]
+position = Vector2(552, 344)
+texture = ExtResource("5_3r6hx")
+
+[node name="Gameover-alien" type="Sprite2D" parent="."]
+position = Vector2(608, 528)
+scale = Vector2(0.254902, 0.254902)
+texture = ExtResource("2_2cn3q")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(600, 288)
+texture = ExtResource("3_e1y7f")
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

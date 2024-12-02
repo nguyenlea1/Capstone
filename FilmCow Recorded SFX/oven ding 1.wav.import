@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpr5axuai5vay"
+path="res://.godot/imported/oven ding 1.wav-6e1c258b2f7c5d0247d9646769be7cef.sample"
+
+[deps]
+
+source_file="res://FilmCow Recorded SFX/oven ding 1.wav"
+dest_files=["res://.godot/imported/oven ding 1.wav-6e1c258b2f7c5d0247d9646769be7cef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

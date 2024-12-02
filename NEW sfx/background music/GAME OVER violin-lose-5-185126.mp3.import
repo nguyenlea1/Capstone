@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjhb5d83xgcol"
+path="res://.godot/imported/GAME OVER violin-lose-5-185126.mp3-5d49b21f2f4fe57fe712a9a07c8bdaf7.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/background music/GAME OVER violin-lose-5-185126.mp3"
+dest_files=["res://.godot/imported/GAME OVER violin-lose-5-185126.mp3-5d49b21f2f4fe57fe712a9a07c8bdaf7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

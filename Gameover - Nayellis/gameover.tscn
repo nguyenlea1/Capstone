@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://cauokilfyrlw"]
+
+[ext_resource type="Texture2D" uid="uid://byfri7g1y4s7i" path="res://Background images/gameover background.webp" id="1_d7xel"]
+[ext_resource type="Texture2D" path="res://Game Over/gameover.png" id="2_00qam"]
+[ext_resource type="Texture2D" path="res://Game Over/Play_Again.png" id="3_gieui"]
+[ext_resource type="Texture2D" path="res://Game Over/gameoveralien.png" id="3_rqa08"]
+[ext_resource type="Texture2D" path="res://Game Over/No.png" id="4_b0ky1"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/no.gd" id="5_mi1wu"]
+[ext_resource type="Texture2D" path="res://Game Over/yes.png" id="5_n4ml1"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/yes.gd" id="7_fw0be"]
+
+[node name="gameover" type="Node2D"]
+
+[node name="GameoverBackground" type="Sprite2D" parent="."]
+position = Vector2(565.667, 315.5)
+scale = Vector2(2.44074, 2.44074)
+texture = ExtResource("1_d7xel")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(584, 160)
+texture = ExtResource("2_00qam")
+
+[node name="Gameoveralien" type="Sprite2D" parent="."]
+position = Vector2(595, 511)
+scale = Vector2(1.10116, 1.10116)
+texture = ExtResource("3_rqa08")
+
+[node name="PlayAgain" type="Sprite2D" parent="."]
+position = Vector2(584, 256)
+scale = Vector2(0.571429, 0.571429)
+texture = ExtResource("3_gieui")
+
+[node name="No" type="Sprite2D" parent="."]
+position = Vector2(641.37, 315.125)
+scale = Vector2(0.361111, 0.361111)
+texture = ExtResource("4_b0ky1")
+script = ExtResource("5_mi1wu")
+
+[node name="TextureButton" type="TextureButton" parent="No"]
+anchors_preset = -1
+anchor_left = -12.742
+anchor_top = -10.111
+anchor_right = -12.742
+anchor_bottom = -10.111
+offset_left = 1923.57
+offset_top = 953.06
+offset_right = 2115.19
+offset_bottom = 1075.56
+metadata/_edit_use_anchors_ = true
+
+[node name="Yes" type="Sprite2D" parent="."]
+position = Vector2(518, 316)
+scale = Vector2(0.338384, 0.338384)
+texture = ExtResource("5_n4ml1")
+script = ExtResource("7_fw0be")
+
+[node name="TextureButton" type="TextureButton" parent="Yes"]
+anchors_preset = -1
+anchor_left = -6.365
+anchor_top = -8.933
+anchor_right = -6.365
+anchor_bottom = -8.933
+offset_left = 1307.4
+offset_top = 778.367
+offset_right = 1558.4
+offset_bottom = 961.367
+
+[connection signal="button_down" from="No/TextureButton" to="No" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Yes/TextureButton" to="Yes" method="_on_texture_button_button_down"]

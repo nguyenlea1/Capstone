@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctv4m24hb5mhl"
+path="res://.godot/imported/GAME OVER 90s-game-ui-15-185108.mp3-bcfe6e0867bf654db41565eec8f83747.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/background music/GAME OVER 90s-game-ui-15-185108.mp3"
+dest_files=["res://.godot/imported/GAME OVER 90s-game-ui-15-185108.mp3-bcfe6e0867bf654db41565eec8f83747.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

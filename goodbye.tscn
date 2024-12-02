@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://3vi25yrrs01v"]
+
+[ext_resource type="Texture2D" uid="uid://ca58ve8toeabq" path="res://Gameover Images/goodbye.png" id="1_8i4u7"]
+
+[node name="Gameover2" type="Node2D"]
+
+[node name="Goodbye" type="Sprite2D" parent="."]
+position = Vector2(755, 451.811)
+scale = Vector2(0.570673, 0.368825)
+texture = ExtResource("1_8i4u7")

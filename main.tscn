@@ -1,0 +1,154 @@
+[gd_scene load_steps=13 format=3 uid="uid://clihluudomxhj"]
+
+[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
+[ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
+[ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
+[ext_resource type="PackedScene" path="res://empty_wrapper.tscn" id="4_oxuj5"]
+[ext_resource type="PackedScene" uid="uid://lpo67ytbp3t5" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="FontFile" uid="uid://du6iq4prfdkvt" path="res://Fonts/KarmaFuture.ttf" id="6_fdowf"]
+[ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
+[ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
+[ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
+[ext_resource type="FontFile" uid="uid://b2gl1mh77025x" path="res://Fonts/VCR_OSD_MONO.ttf" id="11_ecfrw"]
+
+[sub_resource type="GDScript" id="GDScript_ev4nl"]
+script/source = "extends Node2D
+
+@export var blue_candy: PackedScene
+@export var green_candy: PackedScene
+@export var pink_candy: PackedScene
+@export var empty_wrapper: PackedScene
+@export var score: int = 0
+@export var initial_spawn_interval: float = 4.0   # Starting spawn interval in seconds
+@export var min_spawn_interval: float = 0.8       # Minimum spawn interval limit
+@export var spawn_interval_reduction: float = 0.5 # Amount to reduce the interval each time
+
+var items = []  # Array to hold different items
+@export var lives = 3
+@onready var hearts = [$Heart, $Heart2, $Heart3]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	items.append(blue_candy)
+	items.append(green_candy)
+	items.append(pink_candy)
+	items.append(empty_wrapper)
+	$SpawnTimer.wait_time = initial_spawn_interval
+	$SpawnTimer.start() #Starts the spawning timer
+	$SpawnIncreaseTimer.start()
+	
+# Game Over handling
+func game_over() -> void:
+	$SpawnTimer.stop()
+	$Player.set_process(false) 
+	# Load the Game Over scene
+	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover2.tscn\")
+	#game_over_scene.set_final_score(score)
+	
+#spawns candy/food
+func on_SpawnTimer_timeout() -> void:
+	#Selects random item from the array
+	var item_type = items[randi() % items.size()]  # Get a random item type (candy or food)
+	var item = item_type.instantiate()
+	
+	var screen_width = get_viewport_rect().size.x # Size of screen
+	var item_width = 88  # sprite width
+	item.position.x = clamp(randf() * screen_width, item_width / 2, screen_width - item_width / 2) # Keep sprites within screen size
+	item.position.y = 0
+	add_child(item)  # Add the candy to the scene
+	
+# Call this function each time a taco collision happens
+func lose_life() -> void:
+	if lives > 0:
+		lives -= 1
+		hearts[lives].grey_scale()
+	if lives == 0:
+		game_over()  # Call your game over logic here
+	
+func update_score(points: int) -> void:
+	score += points
+	$ScoreLabel.text = \"Score: %d\" % score
+
+
+func _on_spawn_increase_timer_timeout() -> void:
+	if $SpawnTimer.wait_time > min_spawn_interval:
+		$SpawnTimer.wait_time = max(min_spawn_interval, $SpawnTimer.wait_time - spawn_interval_reduction)
+		#print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
+"
+
+[node name="Main" type="Node2D" groups=["game_manager"]]
+script = SubResource("GDScript_ev4nl")
+blue_candy = ExtResource("2_e6exv")
+green_candy = ExtResource("2_k3hn0")
+pink_candy = ExtResource("4_uuvck")
+empty_wrapper = ExtResource("4_oxuj5")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="StoreInterior" type="Sprite2D" parent="."]
+position = Vector2(585, 333)
+scale = Vector2(1.50283, 1.53002)
+texture = ExtResource("2_n3pj2")
+
+[node name="ScoreLabel" type="Label" parent="."]
+<<<<<<< HEAD
+offset_left = 949.0
+offset_top = 54.0
+offset_right = 1141.0
+offset_bottom = 108.0
+=======
+offset_left = 952.0
+offset_top = 32.0
+offset_right = 1125.0
+offset_bottom = 85.0
+>>>>>>> 2675580a46d0bdaa17d973a7646de91dfd491973
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(0.521569, 0, 0.639216, 1)
+theme_override_fonts/font = ExtResource("6_fdowf")
+theme_override_font_sizes/font_size = 43
+text = "Score: 0"
+
+[node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(192, 64)
+scale = Vector2(0.7, 0.7)
+
+[node name="Heart2" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(128, 64)
+scale = Vector2(0.7, 0.7)
+
+[node name="Heart3" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(64, 64)
+scale = Vector2(0.7, 0.7)
+
+[node name="Player" parent="." instance=ExtResource("3_t3agp")]
+
+[node name="Message" type="Sprite2D" parent="."]
+position = Vector2(578, 201)
+scale = Vector2(1.53443, 1.53443)
+texture = ExtResource("8_qymwg")
+script = ExtResource("9_rnwek")
+
+[node name="Timer" type="Timer" parent="Message"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Message"]
+offset_left = -142.724
+offset_top = 33.8888
+offset_right = 147.276
+offset_bottom = 122.888
+theme_override_colors/font_color = Color(0.996078, 0.25098, 0.529412, 1)
+theme_override_fonts/font = ExtResource("11_ecfrw")
+theme_override_font_sizes/font_size = 19
+text = "To play, press the ← and →
+buttons on your keyboard. "
+
+[node name="SpawnIncreaseTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
+[connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnIncreaseTimer" to="." method="_on_spawn_increase_timer_timeout"]

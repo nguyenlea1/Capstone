@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://p1j7eh74wemp"
+path="res://.godot/imported/menu-button-89141.mp3-89458a42a4158d843b4d40b4096ca3a6.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/sound effects/buttons/menu-button-89141.mp3"
+dest_files=["res://.godot/imported/menu-button-89141.mp3-89458a42a4158d843b4d40b4096ca3a6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

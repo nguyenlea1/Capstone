@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlg5ytsen53ed"]
+
+[ext_resource type="Texture2D" uid="uid://csfr17n8xcctl" path="res://Candies/wrappedtrans_blue.png" id="1_rak8n"]
+[ext_resource type="Script" path="res://blue_candy_falling.gd" id="1_ufggs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ihckc"]
+radius = 41.5933
+
+[node name="BlueCandy" type="Area2D" groups=["candies"]]
+collision_mask = 2
+script = ExtResource("1_ufggs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rak8n")
+
+[node name="Area2D" type="Area2D" parent="." groups=["candies"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ihckc")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
