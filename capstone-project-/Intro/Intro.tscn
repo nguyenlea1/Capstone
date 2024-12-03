@@ -456,7 +456,7 @@ region_enabled = true
 region_rect = Rect2(2, 70, 64, 64)
 
 [node name="ColorRect" type="ColorRect" parent="Control/Timer/Part2D"]
-offset_left = -23.0
+offset_left = -24.0
 offset_top = -24.0
 offset_right = 24.0
 offset_bottom = 23.0
@@ -464,13 +464,13 @@ scale = Vector2(1.01264, 0.993224)
 color = Color(1, 1, 0.858824, 1)
 
 [node name="Label" type="Label" parent="Control/Timer"]
-offset_left = 453.0
-offset_top = 176.0
-offset_right = 784.0
-offset_bottom = 390.0
+offset_left = 473.0
+offset_top = 173.0
+offset_right = 755.0
+offset_bottom = 444.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_lx0bh")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Resources on Fizbi’s planet had been 
 running low for a while, and as 
 part of the space team, it was up 
@@ -484,13 +484,14 @@ position = Vector2(606, 255)
 scale = Vector2(1.70312, 1.70312)
 
 [node name="Animation2" type="AnimatedSprite2D" parent="Node2D"]
-scale = Vector2(1, 1)
+position = Vector2(-1.17433, 29.6515)
+scale = Vector2(0.963305, 0.983948)
 sprite_frames = SubResource("SpriteFrames_gxs6x")
 frame_progress = 0.51811
 
 [node name="Animation1" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(6.93579, 42.9726)
-scale = Vector2(2.25689, 2.25689)
+position = Vector2(1.46031e-05, 40.2203)
+scale = Vector2(2.18423, 2.16661)
 sprite_frames = SubResource("SpriteFrames_ya5yi")
 frame_progress = 0.706554
 
@@ -507,9 +508,9 @@ anchor_left = -7.325
 anchor_top = -24.579
 anchor_right = -7.325
 anchor_bottom = -24.579
-offset_left = 237.604
-offset_top = 237.745
-offset_right = 275.604
-offset_bottom = 254.745
+offset_left = 238.051
+offset_top = 237.298
+offset_right = 276.051
+offset_bottom = 254.298
 
 [connection signal="timeout" from="Control/Timer" to="Control" method="_on_timer_timeout"]
