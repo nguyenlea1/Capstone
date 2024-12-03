@@ -1,19 +1,48 @@
 [gd_scene load_steps=5 format=3 uid="uid://cs2u1s88r0svb"]
 
-[ext_resource type="Script" path="res://food_1.gd" id="1_yo758"]
-[ext_resource type="Texture2D" uid="uid://bdcurk1nqne4i" path="res://Carrot.png" id="2_3dt4m"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_r1vrm"]
+
+[sub_resource type="GDScript" id="GDScript_po3fe"]
+script/source = "extends Area2D
+
+@export var speed: float = 200.0  # Speed at which the candy falls
+
+# Called when the node enters the scene tree for the first time
+func _ready() -> void:
+	# Start falling immediately when spawned
+	set_process(true)
+
+# Called every frame
+func _process(delta: float) -> void:
+	# Move it downwards
+	position.y += speed * delta 
+	
+	if position.y > get_viewport_rect().size.y:
+		var main_game = get_tree().root.get_node(\"Main\")
+		if main_game: # Check if main node is set
+			main_game.lose_life()  # Calls lose life when the candy falls off screen
+		queue_free()  # Remove 
+
+# Function to handle collisions with the alien
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group(\"alien\"):
+		get_tree().current_scene.update_score(1)
+		queue_free()
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rurnp"]
+load_path = "res://.godot/imported/Carrot.png-2b23e250c9e823cc44c68e5570f317b1.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uih4d"]
 radius = 19.3733
 
 [node name="Food1" type="Node2D"]
-script = ExtResource("1_yo758")
+script = SubResource("GDScript_po3fe")
 
 [node name="Carrot" type="Sprite2D" parent="."]
 position = Vector2(666, 318)
 scale = Vector2(2.375, 2.3125)
-texture = ExtResource("2_3dt4m")
+texture = SubResource("CompressedTexture2D_rurnp")
 
 [node name="Area2D" type="Area2D" parent="Carrot"]
 script = ExtResource("3_r1vrm")

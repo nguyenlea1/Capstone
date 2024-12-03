@@ -1,16 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgpi42boytc5j"]
+[gd_scene load_steps=5 format=3 uid="uid://dk85jjg1fok5"]
 
-[ext_resource type="Texture2D" uid="uid://b1lvqddonbq8y" path="res://farm morning.jpeg" id="1_tc6yp"]
 [ext_resource type="Texture2D" uid="uid://bvk5an7ixtqsd" path="res://Alien-1.png" id="2_pmgcw"]
 [ext_resource type="Script" path="res://alien_1.gd" id="3_7dnc0"]
 [ext_resource type="Script" path="res://timer.gd" id="4_hjdpe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tn6kq"]
+load_path = "res://.godot/imported/farm morning.jpeg-2a0f9802d96f5ae847b357654ffe12c2.ctex"
 
 [node name="Node2D" type="Node2D"]
 
 [node name="FarmMorning" type="Sprite2D" parent="."]
 position = Vector2(576.5, 324)
 scale = Vector2(1.58992, 1.70976)
-texture = ExtResource("1_tc6yp")
+texture = SubResource("CompressedTexture2D_tn6kq")
 
 [node name="Alien-1" type="Sprite2D" parent="."]
 position = Vector2(568, 510)

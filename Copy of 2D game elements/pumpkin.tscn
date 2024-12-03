@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqit4ib1rfadt"]
+[gd_scene load_steps=5 format=3 uid="uid://co5a1rahqgcdi"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_8ijah"]
-[ext_resource type="Texture2D" uid="uid://q6fqq7r8x0sh" path="res://Pumpkin.png" id="2_hsyij"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_ylpyp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pggba"]
+load_path = "res://.godot/imported/Pumpkin.png-fa090cf139254dd0069653b14f06bf1f.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cw748"]
 radius = 15.656
@@ -13,7 +15,7 @@ script = ExtResource("1_8ijah")
 [node name="Pumpkin" type="Sprite2D" parent="."]
 position = Vector2(578, 329)
 scale = Vector2(2.875, 2.875)
-texture = ExtResource("2_hsyij")
+texture = SubResource("CompressedTexture2D_pggba")
 
 [node name="Area2D" type="Area2D" parent="Pumpkin"]
 script = ExtResource("3_ylpyp")
