@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://24h335ynbp8v"
-path="res://.godot/imported/farm intro.jpeg-b2d003d93e5e729f89791c4c17cf0135.ctex"
+uid="uid://f1lg68wqr40y"
+path="res://.godot/imported/farm morning.jpeg-2a0f9802d96f5ae847b357654ffe12c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://farm intro.jpeg"
-dest_files=["res://.godot/imported/farm intro.jpeg-b2d003d93e5e729f89791c4c17cf0135.ctex"]
+source_file="res://farm morning.jpeg"
+dest_files=["res://.godot/imported/farm morning.jpeg-2a0f9802d96f5ae847b357654ffe12c2.ctex"]
 
 [params]
 
