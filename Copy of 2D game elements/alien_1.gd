@@ -17,3 +17,7 @@ func _process(delta):
 		position.y -= speed
 	if Input.is_action_pressed("ui_down"):
 		position.y += speed
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
