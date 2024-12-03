@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6453rk3gbrik"
+path="res://.godot/imported/8-bit-game-2-186976.mp3-74e31d44fbb9424da0de1b183b0988b5.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/sound effects/buttons/8-bit-game-2-186976.mp3"
+dest_files=["res://.godot/imported/8-bit-game-2-186976.mp3-74e31d44fbb9424da0de1b183b0988b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

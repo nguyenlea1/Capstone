@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1b57yph85wc6"
+path="res://.godot/imported/game-start-6104.mp3-c9857c5e0ed95384669aa8dd3c4d4491.mp3str"
+
+[deps]
+
+source_file="res://FilmCow Recorded SFX/specific sounds/game-start-6104.mp3"
+dest_files=["res://.godot/imported/game-start-6104.mp3-c9857c5e0ed95384669aa8dd3c4d4491.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

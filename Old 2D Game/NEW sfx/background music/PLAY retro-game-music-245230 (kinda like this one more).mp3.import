@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dakgjo3wvjo44"
+path="res://.godot/imported/PLAY retro-game-music-245230 (kinda like this one more).mp3-c3ce7b7eb0180d27a4a907c2153145b9.mp3str"
+
+[deps]
+
+source_file="res://NEW sfx/background music/PLAY retro-game-music-245230 (kinda like this one more).mp3"
+dest_files=["res://.godot/imported/PLAY retro-game-music-245230 (kinda like this one more).mp3-c3ce7b7eb0180d27a4a907c2153145b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
