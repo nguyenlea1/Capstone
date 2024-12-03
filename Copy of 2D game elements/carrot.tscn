@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs2u1s88r0svb"]
+
+[ext_resource type="Script" path="res://food_1.gd" id="1_yo758"]
+[ext_resource type="Texture2D" uid="uid://bdcurk1nqne4i" path="res://Carrot.png" id="2_3dt4m"]
+[ext_resource type="Script" path="res://area_2d.gd" id="3_r1vrm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uih4d"]
+radius = 19.3733
+
+[node name="Food1" type="Node2D"]
+script = ExtResource("1_yo758")
+
+[node name="Carrot" type="Sprite2D" parent="."]
+position = Vector2(666, 318)
+scale = Vector2(2.375, 2.3125)
+texture = ExtResource("2_3dt4m")
+
+[node name="Area2D" type="Area2D" parent="Carrot"]
+script = ExtResource("3_r1vrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot/Area2D"]
+position = Vector2(-2.52632, -0.432433)
+shape = SubResource("CircleShape2D_uih4d")
+
+[connection signal="area_entered" from="Carrot/Area2D" to="." method="_on_area_2d_area_entered"]

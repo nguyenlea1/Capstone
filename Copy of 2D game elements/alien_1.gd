@@ -16,4 +16,8 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up"):
 		position.y -= speed
 	if Input.is_action_pressed("ui_down"):
-		position.y += speed/Users/leanguyen/Desktop/capstone/Copy of 2D game/alien_1.gd
+		position.y += speed
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
